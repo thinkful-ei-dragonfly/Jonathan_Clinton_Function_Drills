@@ -1,3 +1,4 @@
+"use strict";
 function createGreeting(name, age){
     if(age < 0){
         throw new Error('Age can not be negative');
