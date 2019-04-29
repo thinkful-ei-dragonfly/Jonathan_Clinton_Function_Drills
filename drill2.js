@@ -84,3 +84,47 @@ function howManyDays(month){
 console.log(howManyDays('March'));
 console.log(howManyDays('April'));
 console.log(howManyDays('February'));
+
+function RPS(num){
+    let result = '';
+    if((num > 3)||(num < 1)){
+        throw new error('Number should be between 1-3.');
+    }
+    const randomNO = Math.floor(Math.random()*3) + 1;
+    if(num === 1){
+        if(randomNO === 2){
+            result = 'You lose';
+        }
+        else if(randomNO === 3){
+            result = 'You win';
+        }
+        else{
+            result = `It's a draw`;
+        }
+    }
+    else if(num === 2){
+        if(randomNO > 2){
+            result = 'You lose'; 
+        }
+        else if(randomNO < 2){
+            result = 'You win';
+        }
+        else{
+            result = `It's a draw`;
+        }
+    }
+    else if(num === 3){
+        if(randomNO === 1){
+            result = 'You lose';
+        }
+        else if(randomNO === 2){
+            result = 'You win';
+        }
+        else{
+            result = `It's a draw`;
+        }
+    }
+    return result;
+}
+
+console.log(RPS(1));
