@@ -1,3 +1,4 @@
+"use strict";
 function jediName(firstName, lastName){
     let jedi = lastName.substring(0, 3).concat(firstName.substring(0, 2))
     return jedi;
@@ -51,3 +52,35 @@ console.log(decode('bells'));
 console.log(decode('brown'));
 console.log(decode('croon'));
 console.log(decode('droop'));
+
+function howManyDays(month){
+    let result = '';
+    switch(month){
+        case 'April':
+        case 'June':
+        case 'September':
+        case 'November':
+            result = `${month} has 30 days`;
+            break;
+    }
+    switch(month){
+        case 'January':
+        case 'March':
+        case 'May':
+        case 'July':
+        case 'August':
+        case 'October':
+        case 'December':
+            result = `${month} has 31 days`;
+            break;
+    }
+    switch(month){
+        case 'February':
+            result = `${month} has 28 days`;
+            break;
+    }
+    return result;
+}
+console.log(howManyDays('March'));
+console.log(howManyDays('April'));
+console.log(howManyDays('February'));
