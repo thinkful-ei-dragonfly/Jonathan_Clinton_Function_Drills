@@ -2,8 +2,11 @@
 
 function createGreeting(name, age){
     if(age < 0){
-        throw new Error("Age can not be negative");
+        throw new Error('Age can not be negative');
     } 
+    if((name === undefined)||(age === undefined)){
+        throw new Error('Arugments not valid');
+    }
  return `Hi, my name is ${name} and I'm ${age} years old.`;
 }
 console.log(createGreeting());
@@ -11,6 +14,9 @@ console.log(createGreeting());
 function getYearOfBirth(age){
     if(age < 0){
         throw new Error("Age can not be negative")
+    }
+    if((name === undefined)||(age === undefined)){
+        throw new Error('Arugments not valid');
     }
     const yearOfBirth = 2019 - age;
     return `I was born in ${yearOfBirth}`;
