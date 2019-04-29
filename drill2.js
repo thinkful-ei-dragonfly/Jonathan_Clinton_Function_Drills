@@ -4,3 +4,20 @@ function jediName(firstName, lastName){
 }
 console.log(jediName('Clinton', 'Carter'));
 
+function beyond(num){
+    if (num === infinity){
+        console.log('and beyond');
+    }
+    
+    else if (num > 0){
+        console.log('To infinity');
+    }
+    
+    else if(num < 0){
+        console.log('To negative infinity');
+    }
+
+    else {
+        console.log('Staying home');
+    }
+}
